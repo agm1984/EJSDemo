@@ -1,15 +1,19 @@
 var express = require('express');
 var app = express();
 
+// Set public assets directory and templating engine
+app.use(express.static("public"));
+app.set("view engine", "ejs");
+
 // Home Route
 app.get("/", function(req, res) {
-    res.render("home.ejs");
+    res.render("home");
 });
 
 // Love Route
 app.get("/fallinlovewith/:thing", function (req, res) {
     var thing = req.params.thing;
-    res.render("love.ejs", { thingVar: thing });
+    res.render("love", { thingVar: thing });
 });
 
 app.get("/posts", function(req, res) {
@@ -18,7 +22,7 @@ app.get("/posts", function(req, res) {
         { title: "Post 2", author: "Frank" },
         { title: "Post 3", author: "Sally" }
     ];
-    res.render("posts.ejs", { posts: posts });
+    res.render("posts", { posts: posts });
 });
 
 // Server config
