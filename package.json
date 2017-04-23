@@ -12,6 +12,7 @@
   "author": "Adam Mackintosh",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^2.5.6",
     "express": "^4.15.2"
   }
 }
