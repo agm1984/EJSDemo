@@ -1,4 +1,26 @@
 body {
-  background-color: yellow;
-  color: purple;
+  background-color: steelblue;
+  color: white;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+}
+ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.homeImage {
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  font-size: 10px;
 }
