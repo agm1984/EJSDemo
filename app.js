@@ -12,6 +12,15 @@ app.get("/fallinlovewith/:thing", function (req, res) {
     res.render("love.ejs", { thingVar: thing });
 });
 
+app.get("/posts", function(req, res) {
+    var posts = [
+        { title: "Post 1", author: "Suzy" },
+        { title: "Post 2", author: "Frank" },
+        { title: "Post 3", author: "Sally" }
+    ];
+    res.render("posts.ejs", { posts: posts });
+});
+
 // Server config
 config = {};
 config.port = 3000;
